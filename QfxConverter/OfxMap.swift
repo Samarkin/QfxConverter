@@ -23,15 +23,7 @@ extension OfxMap: CustomStringConvertible {
             if result.count > 1 {
                 result += ","
             }
-            result += "\"\(k)\": "
-            switch v {
-            case .empty:
-                result += "null"
-            case let .value(v):
-                result += "\"\(v)\""
-            case let .map(m):
-                result += "\"\(m)\""
-            }
+            result += "\"\(k.replacingOccurrences(of: "\"", with: "\\\""))\":\(v)"
         }
         result += "}"
         return result

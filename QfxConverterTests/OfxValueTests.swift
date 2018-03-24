@@ -28,14 +28,27 @@ final class OfxValueTests: XCTestCase {
         XCTAssertNotEqual(dog, cat)
     }
 
+    func testArrayComparer() {
+        let array = OfxValue.array([OfxValue.value("test1"), OfxValue.value("test2")])
+        let sameArray = OfxValue.array([OfxValue.value("test1"), OfxValue.value("test2")])
+        let differentArray = OfxValue.array([OfxValue.value("test2"), OfxValue.value("test1")])
+
+        XCTAssertEqual(array, sameArray)
+        XCTAssertNotEqual(array, differentArray)
+    }
+
     func testMixedComparer() {
         let empty = OfxValue.empty
         let value = OfxValue.value("test")
         let map = OfxValue.map(OfxMap())
+        let array = OfxValue.array([OfxValue.value("test1"), OfxValue.value("test2")])
 
         XCTAssertNotEqual(empty, value)
         XCTAssertNotEqual(empty, map)
+        XCTAssertNotEqual(empty, array)
         XCTAssertNotEqual(value, map)
+        XCTAssertNotEqual(value, array)
+        XCTAssertNotEqual(map, array)
     }
 
     func testStringLiteralInit() {
@@ -63,5 +76,54 @@ final class OfxValueTests: XCTestCase {
         ]
 
         XCTAssertEqual(map1, map2)
+    }
+
+    func testArrayLiteralInit() {
+        let value1 = OfxValue.array([OfxValue.value("test1"), OfxValue.value("test2")])
+        let value2: OfxValue = ["test1", "test2"]
+
+        XCTAssertEqual(value1, value2)
+    }
+
+    func testDescription() {
+        let v: OfxValue = [
+            "key1": "value1",
+            "key2": [
+                "key20": .empty,
+                "key21": ["value21", "value22"]
+            ]
+        ]
+
+        XCTAssertEqual(v.description, "{\"key2\":{\"key21\":[\"value21\",\"value22\"],\"key20\":null},\"key1\":\"value1\"}")
+    }
+
+    func testDescriptionEscaping() {
+        let v: OfxValue = [
+            "key \"1": "value \"1",
+            "key \"2": [
+                "key \"20": .empty,
+                "key \"21": ["value \"21", "value \"22"]
+            ]
+        ]
+
+        XCTAssertEqual(v.description, "{\"key \\\"1\":\"value \\\"1\",\"key \\\"2\":{\"key \\\"21\":[\"value \\\"21\",\"value \\\"22\"],\"key \\\"20\":null}}")
+    }
+
+    func testSubscript() {
+        let innerMap = OfxMap()
+        innerMap["key1"] = "value1"
+        let map = OfxValue.map(innerMap)
+
+        XCTAssertEqual(map["key1"], "value1")
+        XCTAssertEqual(map["key2"], .empty)
+
+        let empty = OfxValue.empty
+        let value = OfxValue.value("test")
+        let array = OfxValue.array([OfxValue.value("test1"), OfxValue.value("test2")])
+
+        XCTAssertEqual(empty["key1"], .empty)
+        XCTAssertEqual(value["test"], .empty)
+        XCTAssertEqual(array["0"], .empty)
+        XCTAssertEqual(array["test1"], .empty)
     }
 }

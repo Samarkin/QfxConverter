@@ -82,4 +82,12 @@ final class OfxMapTests: XCTestCase {
         XCTAssertNotEqual(map1, map2)
         XCTAssertNotEqual(map2, map1)
     }
+    
+    func testSubscript() {
+        let map = OfxMap()
+        map["key1"] = "value1"
+
+        XCTAssertEqual(map["key1"], "value1")
+        XCTAssertEqual(map["key2"], .empty)
+    }
 }

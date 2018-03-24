@@ -2,24 +2,15 @@ enum OfxValue {
     case empty
     case map(OfxMap)
     case value(String)
+    case array([OfxValue])
 }
 
 extension OfxValue {
     subscript(key: String) -> OfxValue {
-        if case let .map(map) = self {
-            return map[key]
-        }
-        else {
+        guard case let .map(map) = self else {
             return .empty
         }
-    }
-    var value: String? {
-        if case let .value(s) = self {
-            return s
-        }
-        else {
-            return nil
-        }
+        return map[key]
     }
 }
 
@@ -39,6 +30,35 @@ extension OfxValue: ExpressibleByDictionaryLiteral {
     }
 }
 
+extension OfxValue: ExpressibleByArrayLiteral {
+    init(arrayLiteral elements: OfxValue...) {
+        self = .array(elements)
+    }
+}
+
+extension OfxValue: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .empty:
+            return "null"
+        case let .value(v):
+            return "\"\(v.description.replacingOccurrences(of: "\"", with: "\\\""))\""
+        case let .map(m):
+            return m.description
+        case let .array(a):
+            var result = "["
+            for (i,v) in a.enumerated() {
+                if i > 0 {
+                    result += ","
+                }
+                result += v.description
+            }
+            result += "]"
+            return result
+        }
+    }
+}
+
 extension OfxValue: Equatable {
     static func ==(left: OfxValue, right: OfxValue) -> Bool {
         if case let .value(leftValue) = left, case let .value(rightValue) = right {
@@ -49,6 +69,9 @@ extension OfxValue: Equatable {
         }
         if case .empty = left, case .empty = right {
             return true
+        }
+        if case let .array(leftArray) = left, case let .array(rightArray) = right {
+            return leftArray == rightArray
         }
         return false
     }

@@ -33,7 +33,7 @@ final class QfxV1ParserTests: XCTestCase {
 
     func testWhitespaces() {
         let parser = QfxV1Parser()
-        let result = try! parser.parse("\n\n  <OFX>  \t\n<KEY1>\t  <SUBKEY1> \nVALUE11\n<SUBKEY2>\n \tVALUE12\n</KEY1>\n <KEY2>\n  VALUE2\t</OFX>\n  \n")
-        XCTAssertEqual(result.ofx, ["KEY1": ["SUBKEY1":"VALUE11","SUBKEY2":"VALUE12"], "KEY2":"VALUE2"])
+        let result = try! parser.parse("\n\n  <OFX>  \t\n<KEY 1>\t  <SUBKEY 1> \nVALUE 11\n<SUBKEY 2>\n \tVALUE 12\n</KEY 1>\n <KEY 2>\n  VALUE 2\t</OFX>\n  \n")
+        XCTAssertEqual(result.ofx, ["KEY 1": ["SUBKEY 1":"VALUE 11","SUBKEY 2":"VALUE 12"], "KEY 2":"VALUE 2"])
     }
 }
