@@ -12,6 +12,12 @@ extension OfxValue {
         }
         return map[key]
     }
+    subscript(index: Int) -> OfxValue {
+        guard case let .array(array) = self, 0..<array.count ~= index else {
+            return .empty
+        }
+        return array[index]
+    }
 }
 
 extension OfxValue: ExpressibleByStringLiteral {

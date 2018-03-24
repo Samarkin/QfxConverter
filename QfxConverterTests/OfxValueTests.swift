@@ -109,7 +109,7 @@ final class OfxValueTests: XCTestCase {
         XCTAssertEqual(v.description, "{\"key \\\"1\":\"value \\\"1\",\"key \\\"2\":{\"key \\\"21\":[\"value \\\"21\",\"value \\\"22\"],\"key \\\"20\":null}}")
     }
 
-    func testSubscript() {
+    func testStringSubscript() {
         let innerMap = OfxMap()
         innerMap["key1"] = "value1"
         let map = OfxValue.map(innerMap)
@@ -125,5 +125,24 @@ final class OfxValueTests: XCTestCase {
         XCTAssertEqual(value["test"], .empty)
         XCTAssertEqual(array["0"], .empty)
         XCTAssertEqual(array["test1"], .empty)
+    }
+
+    func testIntegerSubscript() {
+        let array = OfxValue.array([OfxValue.value("test1"), OfxValue.value("test2")])
+        XCTAssertEqual(array[-1], .empty)
+        XCTAssertEqual(array[0], "test1")
+        XCTAssertEqual(array[1], "test2")
+        XCTAssertEqual(array[2], .empty)
+        XCTAssertEqual(array[3], .empty)
+
+        let empty = OfxValue.empty
+        let value = OfxValue.value("test")
+        let map: OfxValue = ["key1": "value1"]
+        XCTAssertEqual(empty[0], .empty)
+        XCTAssertEqual(empty[-1], .empty)
+        XCTAssertEqual(value[0], .empty)
+        XCTAssertEqual(value[-1], .empty)
+        XCTAssertEqual(map[0], .empty)
+        XCTAssertEqual(map[-1], .empty)
     }
 }
