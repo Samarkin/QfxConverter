@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4DBE42BC2065F55600103290 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42BB2065F55600103290 /* main.swift */; };
+		4DBE42C32065F70200103290 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42C22065F70200103290 /* Converter.swift */; };
+		4DBE42C52065F85D00103290 /* QfxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42C42065F85D00103290 /* QfxParser.swift */; };
+		4DBE42C72065F96800103290 /* QfxV1Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42C62065F96800103290 /* QfxV1Parser.swift */; };
+		4DBE42C92065FB4300103290 /* QfxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42C82065FB4300103290 /* QfxObject.swift */; };
+		4DBE42CB2065FC4100103290 /* QfxFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42CA2065FC4100103290 /* QfxFormatError.swift */; };
+		4DBE42CD2065FCFA00103290 /* QfxV2Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42CC2065FCFA00103290 /* QfxV2Parser.swift */; };
+		4DBE42CF2065FE1300103290 /* OfxValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42CE2065FE1300103290 /* OfxValue.swift */; };
+		4DBE42D7206602B900103290 /* QfxV1ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42D6206602B900103290 /* QfxV1ParserTests.swift */; };
+		4DBE42DC206602E600103290 /* QfxV1Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42C62065F96800103290 /* QfxV1Parser.swift */; };
+		4DBE42DD2066035800103290 /* QfxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42C82065FB4300103290 /* QfxObject.swift */; };
+		4DBE42DE2066036300103290 /* OfxValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42CE2065FE1300103290 /* OfxValue.swift */; };
+		4DBE42DF2066036800103290 /* QfxFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42CA2065FC4100103290 /* QfxFormatError.swift */; };
+		4DBE42E1206608A900103290 /* OfxValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42E0206608A900103290 /* OfxValueTests.swift */; };
+		4DBE42E520660DBB00103290 /* OfxMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42E420660DBB00103290 /* OfxMap.swift */; };
+		4DBE42E620660DBE00103290 /* OfxMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42E420660DBB00103290 /* OfxMap.swift */; };
+		4DBE42E820660DF000103290 /* OfxMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42E720660DF000103290 /* OfxMapTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +41,30 @@
 /* Begin PBXFileReference section */
 		4DBE42B82065F55600103290 /* QfxConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QfxConverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBE42BB2065F55600103290 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4DBE42C22065F70200103290 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		4DBE42C42065F85D00103290 /* QfxParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QfxParser.swift; sourceTree = "<group>"; };
+		4DBE42C62065F96800103290 /* QfxV1Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QfxV1Parser.swift; sourceTree = "<group>"; };
+		4DBE42C82065FB4300103290 /* QfxObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QfxObject.swift; sourceTree = "<group>"; };
+		4DBE42CA2065FC4100103290 /* QfxFormatError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QfxFormatError.swift; sourceTree = "<group>"; };
+		4DBE42CC2065FCFA00103290 /* QfxV2Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QfxV2Parser.swift; sourceTree = "<group>"; };
+		4DBE42CE2065FE1300103290 /* OfxValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxValue.swift; sourceTree = "<group>"; };
+		4DBE42D4206602B900103290 /* QfxConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QfxConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DBE42D6206602B900103290 /* QfxV1ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QfxV1ParserTests.swift; sourceTree = "<group>"; };
+		4DBE42D8206602B900103290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DBE42E0206608A900103290 /* OfxValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxValueTests.swift; sourceTree = "<group>"; };
+		4DBE42E420660DBB00103290 /* OfxMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxMap.swift; sourceTree = "<group>"; };
+		4DBE42E720660DF000103290 /* OfxMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxMapTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4DBE42B52065F55600103290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DBE42D1206602B900103290 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				4DBE42BA2065F55600103290 /* QfxConverter */,
+				4DBE42D5206602B900103290 /* QfxConverterTests */,
 				4DBE42B92065F55600103290 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				4DBE42B82065F55600103290 /* QfxConverter */,
+				4DBE42D4206602B900103290 /* QfxConverterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +96,27 @@
 			isa = PBXGroup;
 			children = (
 				4DBE42BB2065F55600103290 /* main.swift */,
+				4DBE42C22065F70200103290 /* Converter.swift */,
+				4DBE42CA2065FC4100103290 /* QfxFormatError.swift */,
+				4DBE42C42065F85D00103290 /* QfxParser.swift */,
+				4DBE42C82065FB4300103290 /* QfxObject.swift */,
+				4DBE42E420660DBB00103290 /* OfxMap.swift */,
+				4DBE42CE2065FE1300103290 /* OfxValue.swift */,
+				4DBE42C62065F96800103290 /* QfxV1Parser.swift */,
+				4DBE42CC2065FCFA00103290 /* QfxV2Parser.swift */,
 			);
 			path = QfxConverter;
+			sourceTree = "<group>";
+		};
+		4DBE42D5206602B900103290 /* QfxConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DBE42E720660DF000103290 /* OfxMapTests.swift */,
+				4DBE42E0206608A900103290 /* OfxValueTests.swift */,
+				4DBE42D6206602B900103290 /* QfxV1ParserTests.swift */,
+				4DBE42D8206602B900103290 /* Info.plist */,
+			);
+			path = QfxConverterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +139,23 @@
 			productReference = 4DBE42B82065F55600103290 /* QfxConverter */;
 			productType = "com.apple.product-type.tool";
 		};
+		4DBE42D3206602B900103290 /* QfxConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DBE42D9206602B900103290 /* Build configuration list for PBXNativeTarget "QfxConverterTests" */;
+			buildPhases = (
+				4DBE42D0206602B900103290 /* Sources */,
+				4DBE42D1206602B900103290 /* Frameworks */,
+				4DBE42D2206602B900103290 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QfxConverterTests;
+			productName = QfxConverterTests;
+			productReference = 4DBE42D4206602B900103290 /* QfxConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +167,10 @@
 				ORGANIZATIONNAME = "Pavel Samarkin";
 				TargetAttributes = {
 					4DBE42B72065F55600103290 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					4DBE42D3206602B900103290 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -111,16 +189,50 @@
 			projectRoot = "";
 			targets = (
 				4DBE42B72065F55600103290 /* QfxConverter */,
+				4DBE42D3206602B900103290 /* QfxConverterTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DBE42D2206602B900103290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DBE42B42065F55600103290 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DBE42C92065FB4300103290 /* QfxObject.swift in Sources */,
+				4DBE42CB2065FC4100103290 /* QfxFormatError.swift in Sources */,
+				4DBE42CD2065FCFA00103290 /* QfxV2Parser.swift in Sources */,
+				4DBE42C32065F70200103290 /* Converter.swift in Sources */,
 				4DBE42BC2065F55600103290 /* main.swift in Sources */,
+				4DBE42C52065F85D00103290 /* QfxParser.swift in Sources */,
+				4DBE42E520660DBB00103290 /* OfxMap.swift in Sources */,
+				4DBE42CF2065FE1300103290 /* OfxValue.swift in Sources */,
+				4DBE42C72065F96800103290 /* QfxV1Parser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DBE42D0206602B900103290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DBE42DF2066036800103290 /* QfxFormatError.swift in Sources */,
+				4DBE42E1206608A900103290 /* OfxValueTests.swift in Sources */,
+				4DBE42E820660DF000103290 /* OfxMapTests.swift in Sources */,
+				4DBE42E620660DBE00103290 /* OfxMap.swift in Sources */,
+				4DBE42D7206602B900103290 /* QfxV1ParserTests.swift in Sources */,
+				4DBE42DC206602E600103290 /* QfxV1Parser.swift in Sources */,
+				4DBE42DE2066036300103290 /* OfxValue.swift in Sources */,
+				4DBE42DD2066035800103290 /* QfxObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +365,34 @@
 			};
 			name = Release;
 		};
+		4DBE42DA206602B900103290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 585KF8XX2F;
+				INFOPLIST_FILE = QfxConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.samarkin.QfxConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		4DBE42DB206602B900103290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 585KF8XX2F;
+				INFOPLIST_FILE = QfxConverterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.samarkin.QfxConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -270,6 +410,15 @@
 			buildConfigurations = (
 				4DBE42C02065F55600103290 /* Debug */,
 				4DBE42C12065F55600103290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DBE42D9206602B900103290 /* Build configuration list for PBXNativeTarget "QfxConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DBE42DA206602B900103290 /* Debug */,
+				4DBE42DB206602B900103290 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
