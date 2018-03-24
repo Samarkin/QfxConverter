@@ -14,6 +14,18 @@ class OfxMap {
             dict[key] = newValue
         }
     }
+    func add(key: String, value: OfxValue) {
+        guard let x = dict[key] else {
+            dict[key] = value
+            return
+        }
+        guard case var .array(xs) = x else {
+            dict[key] = [x, value]
+            return
+        }
+        xs.append(value)
+        dict[key] = .array(xs)
+    }
 }
 
 extension OfxMap: CustomStringConvertible {

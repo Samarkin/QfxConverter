@@ -78,7 +78,7 @@ final class QfxV1Parser {
                         guard let (_, map) = mapStack.last else {
                             throw QfxFormatError(message: "Orphaned value \"\(value)\"")
                         }
-                        map[tagname] = .value(value)
+                        map.add(key: tagname, value: .value(value))
                         tagname = ""
                         value = ""
                         state = .tag
@@ -88,8 +88,7 @@ final class QfxV1Parser {
                             throw QfxFormatError(message: "Orphaned object")
                         }
                         let newMap = OfxMap()
-                        // TODO: Duplicate tagnames = arrays
-                        map[tagname] = .map(newMap)
+                        map.add(key: tagname, value: .map(newMap))
                         mapStack.append((tagname,newMap))
                         tagname = ""
                         state = .tag

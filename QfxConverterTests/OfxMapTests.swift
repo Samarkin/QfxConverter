@@ -90,4 +90,17 @@ final class OfxMapTests: XCTestCase {
         XCTAssertEqual(map["key1"], "value1")
         XCTAssertEqual(map["key2"], .empty)
     }
+
+    func testAdd() {
+        let map = OfxMap()
+
+        map.add(key: "key", value: "value1")
+        XCTAssertEqual(map["key"], "value1")
+
+        map.add(key: "key", value: "value2")
+        XCTAssertEqual(map["key"], ["value1", "value2"])
+
+        map.add(key: "key", value: "value3")
+        XCTAssertEqual(map["key"], ["value1", "value2", "value3"])
+    }
 }
