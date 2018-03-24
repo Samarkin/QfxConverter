@@ -99,14 +99,14 @@ final class OfxValueTests: XCTestCase {
 
     func testDescriptionEscaping() {
         let v: OfxValue = [
-            "key \"1": "value \"1",
+            "\\key \"1": "\\value \"1",
             "key \"2": [
                 "key \"20": .empty,
                 "key \"21": ["value \"21", "value \"22"]
             ]
         ]
 
-        XCTAssertEqual(v.description, "{\"key \\\"1\":\"value \\\"1\",\"key \\\"2\":{\"key \\\"21\":[\"value \\\"21\",\"value \\\"22\"],\"key \\\"20\":null}}")
+        XCTAssertEqual(v.description, "{\"key \\\"2\":{\"key \\\"21\":[\"value \\\"21\",\"value \\\"22\"],\"key \\\"20\":null},\"\\\\key \\\"1\":\"\\\\value \\\"1\"}")
     }
 
     func testStringSubscript() {

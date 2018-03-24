@@ -48,7 +48,7 @@ extension OfxValue: CustomStringConvertible {
         case .empty:
             return "null"
         case let .value(v):
-            return "\"\(v.description.replacingOccurrences(of: "\"", with: "\\\""))\""
+            return "\"\(v.description.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "\"", with: "\\\""))\""
         case let .map(m):
             return m.description
         case let .array(a):

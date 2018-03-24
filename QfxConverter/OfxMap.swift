@@ -35,7 +35,7 @@ extension OfxMap: CustomStringConvertible {
             if result.count > 1 {
                 result += ","
             }
-            result += "\"\(k.replacingOccurrences(of: "\"", with: "\\\""))\":\(v)"
+            result += "\"\(k.replacingOccurrences(of: "\\", with: "\\\\").replacingOccurrences(of: "\"", with: "\\\""))\":\(v)"
         }
         result += "}"
         return result
