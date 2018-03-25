@@ -74,6 +74,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D7CA42720671C5E008D245B /* Qfx */ = {
+			isa = PBXGroup;
+			children = (
+				4DBE42CA2065FC4100103290 /* QfxFormatError.swift */,
+				4DBE42C42065F85D00103290 /* QfxParser.swift */,
+				4DBE42C82065FB4300103290 /* QfxObject.swift */,
+				4DBE42E420660DBB00103290 /* OfxMap.swift */,
+				4DBE42CE2065FE1300103290 /* OfxValue.swift */,
+				4DBE42C62065F96800103290 /* QfxV1Parser.swift */,
+				4DBE42CC2065FCFA00103290 /* QfxV2Parser.swift */,
+			);
+			name = Qfx;
+			sourceTree = "<group>";
+		};
 		4DBE42AF2065F55600103290 = {
 			isa = PBXGroup;
 			children = (
@@ -95,15 +109,9 @@
 		4DBE42BA2065F55600103290 /* QfxConverter */ = {
 			isa = PBXGroup;
 			children = (
+				4D7CA42720671C5E008D245B /* Qfx */,
 				4DBE42BB2065F55600103290 /* main.swift */,
 				4DBE42C22065F70200103290 /* Converter.swift */,
-				4DBE42CA2065FC4100103290 /* QfxFormatError.swift */,
-				4DBE42C42065F85D00103290 /* QfxParser.swift */,
-				4DBE42C82065FB4300103290 /* QfxObject.swift */,
-				4DBE42E420660DBB00103290 /* OfxMap.swift */,
-				4DBE42CE2065FE1300103290 /* OfxValue.swift */,
-				4DBE42C62065F96800103290 /* QfxV1Parser.swift */,
-				4DBE42CC2065FCFA00103290 /* QfxV2Parser.swift */,
 			);
 			path = QfxConverter;
 			sourceTree = "<group>";
