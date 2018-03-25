@@ -10,7 +10,7 @@ final class Converter {
     func convert(to outputFile: String) throws {
         let query = Qql.query
             .select("DTPOSTED", "NAME", "TRNAMT")
-            .from("OFX/CREDITCARDMSGSRSV1/CCSTMTTRNRS/CCSTMTRS/BANKTRANLIST/STMTTRN")
+            .from("CREDITCARDMSGSRSV1/CCSTMTTRNRS/CCSTMTRS/BANKTRANLIST/STMTTRN")
         let parser = QfxParser()
         var results: [QqlQueryResult] = []
         for filename in try FileManager.default.contentsOfDirectory(atPath: folder) {
@@ -30,6 +30,7 @@ final class Converter {
         let outputUrl = URL(fileURLWithPath: outputFile)
         try query.headerAsCsv().data(using: .utf8)!.write(to: outputUrl)
         let file = try FileHandle(forWritingTo: outputUrl)
+        file.seekToEndOfFile()
         for result in results {
             file.write(result.asCsv().data(using: .utf8)!)
         }

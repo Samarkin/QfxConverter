@@ -18,6 +18,12 @@ extension OfxValue {
         }
         return array[index]
     }
+    var value: String? {
+        guard case let .value(s) = self else {
+            return nil
+        }
+        return s
+    }
 }
 
 extension OfxValue: ExpressibleByStringLiteral {

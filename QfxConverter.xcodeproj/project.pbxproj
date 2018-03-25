@@ -28,6 +28,7 @@
 		4DBE42E520660DBB00103290 /* OfxMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42E420660DBB00103290 /* OfxMap.swift */; };
 		4DBE42E620660DBE00103290 /* OfxMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42E420660DBB00103290 /* OfxMap.swift */; };
 		4DBE42E820660DF000103290 /* OfxMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42E720660DF000103290 /* OfxMapTests.swift */; };
+		4DE3CF68206806B200BFA803 /* QqlSelectQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3CF67206806B200BFA803 /* QqlSelectQueryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +61,7 @@
 		4DBE42E0206608A900103290 /* OfxValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxValueTests.swift; sourceTree = "<group>"; };
 		4DBE42E420660DBB00103290 /* OfxMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxMap.swift; sourceTree = "<group>"; };
 		4DBE42E720660DF000103290 /* OfxMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxMapTests.swift; sourceTree = "<group>"; };
+		4DE3CF67206806B200BFA803 /* QqlSelectQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlSelectQueryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				4DBE42E720660DF000103290 /* OfxMapTests.swift */,
 				4DBE42E0206608A900103290 /* OfxValueTests.swift */,
 				4DBE42D6206602B900103290 /* QfxV1ParserTests.swift */,
+				4DE3CF67206806B200BFA803 /* QqlSelectQueryTests.swift */,
 				4DBE42D8206602B900103290 /* Info.plist */,
 			);
 			path = QfxConverterTests;
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE3CF68206806B200BFA803 /* QqlSelectQueryTests.swift in Sources */,
 				4D7CA42C2067207C008D245B /* QqlQuery.swift in Sources */,
 				4DBE42DF2066036800103290 /* QfxFormatError.swift in Sources */,
 				4DBE42E1206608A900103290 /* OfxValueTests.swift in Sources */,

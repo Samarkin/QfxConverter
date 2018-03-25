@@ -19,8 +19,25 @@ final class QqlSelectQuery: QqlQuery {
     }
 
     func perform(on object: QfxObject) -> [QqlQueryResult] {
-        // TODO
-        return []
+        guard let ofx = object.ofx else {
+            return []
+        }
+        let pathComponents = path.components(separatedBy: "/")
+        var o: [OfxValue] = [ofx]
+        for pathComponent in pathComponents {
+            o = o.flatMap { v -> [OfxValue] in
+                let v = v[pathComponent]
+                switch v {
+                case .empty:
+                    return []
+                case let .array(a):
+                    return a
+                default:
+                    return [v]
+                }
+            }
+        }
+        return o.map { v in fields.map { f in v[f].value ?? "" } }
     }
 
     func headerAsCsv() -> String {
