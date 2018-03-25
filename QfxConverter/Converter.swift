@@ -7,13 +7,18 @@ final class Converter {
         self.folder = folder
     }
 
-    func convert() throws {
+    func convert(to outputFile: String) throws {
+        let query = Qql.query
+            .select("DTPOSTED", "NAME", "TRNAMT")
+            .from("OFX/CREDITCARDMSGSRSV1/CCSTMTTRNRS/CCSTMTRS/BANKTRANLIST/STMTTRN")
         let parser = QfxParser()
+        var results: [QqlQueryResult] = []
         for filename in try FileManager.default.contentsOfDirectory(atPath: folder) {
             let file = (folder as NSString).appendingPathComponent(filename)
             do {
                 let qfx = try String(contentsOfFile: file, encoding: .utf8)
-                try parser.parse(qfx)
+                let obj = try parser.parse(qfx)
+                results.append(contentsOf: query.perform(on: obj))
                 print("Found QFX: \(file)")
             }
             catch let error as QfxFormatError {
@@ -21,5 +26,13 @@ final class Converter {
                 //throw error
             }
         }
+
+        let outputUrl = URL(fileURLWithPath: outputFile)
+        try query.headerAsCsv().data(using: .utf8)!.write(to: outputUrl)
+        let file = try FileHandle(forWritingTo: outputUrl)
+        for result in results {
+            file.write(result.asCsv().data(using: .utf8)!)
+        }
+        file.closeFile()
     }
 }

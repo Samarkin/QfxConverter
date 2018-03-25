@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7CA42B20671DE9008D245B /* QqlQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CA42A20671DE9008D245B /* QqlQuery.swift */; };
+		4D7CA42C2067207C008D245B /* QqlQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CA42A20671DE9008D245B /* QqlQuery.swift */; };
+		4D7CA42E206720C0008D245B /* QqlSelectQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CA42D206720C0008D245B /* QqlSelectQuery.swift */; };
+		4D7CA42F206723EA008D245B /* QqlSelectQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CA42D206720C0008D245B /* QqlSelectQuery.swift */; };
 		4DBE42BC2065F55600103290 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42BB2065F55600103290 /* main.swift */; };
 		4DBE42C32065F70200103290 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42C22065F70200103290 /* Converter.swift */; };
 		4DBE42C52065F85D00103290 /* QfxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE42C42065F85D00103290 /* QfxParser.swift */; };
@@ -39,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D7CA42A20671DE9008D245B /* QqlQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlQuery.swift; sourceTree = "<group>"; };
+		4D7CA42D206720C0008D245B /* QqlSelectQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlSelectQuery.swift; sourceTree = "<group>"; };
 		4DBE42B82065F55600103290 /* QfxConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QfxConverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBE42BB2065F55600103290 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4DBE42C22065F70200103290 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
@@ -88,6 +94,15 @@
 			name = Qfx;
 			sourceTree = "<group>";
 		};
+		4D7CA42920671DC7008D245B /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				4D7CA42A20671DE9008D245B /* QqlQuery.swift */,
+				4D7CA42D206720C0008D245B /* QqlSelectQuery.swift */,
+			);
+			name = Query;
+			sourceTree = "<group>";
+		};
 		4DBE42AF2065F55600103290 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				4D7CA42720671C5E008D245B /* Qfx */,
+				4D7CA42920671DC7008D245B /* Query */,
 				4DBE42BB2065F55600103290 /* main.swift */,
 				4DBE42C22065F70200103290 /* Converter.swift */,
 			);
@@ -222,7 +238,9 @@
 				4DBE42CD2065FCFA00103290 /* QfxV2Parser.swift in Sources */,
 				4DBE42C32065F70200103290 /* Converter.swift in Sources */,
 				4DBE42BC2065F55600103290 /* main.swift in Sources */,
+				4D7CA42B20671DE9008D245B /* QqlQuery.swift in Sources */,
 				4DBE42C52065F85D00103290 /* QfxParser.swift in Sources */,
+				4D7CA42E206720C0008D245B /* QqlSelectQuery.swift in Sources */,
 				4DBE42E520660DBB00103290 /* OfxMap.swift in Sources */,
 				4DBE42CF2065FE1300103290 /* OfxValue.swift in Sources */,
 				4DBE42C72065F96800103290 /* QfxV1Parser.swift in Sources */,
@@ -233,12 +251,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7CA42C2067207C008D245B /* QqlQuery.swift in Sources */,
 				4DBE42DF2066036800103290 /* QfxFormatError.swift in Sources */,
 				4DBE42E1206608A900103290 /* OfxValueTests.swift in Sources */,
 				4DBE42E820660DF000103290 /* OfxMapTests.swift in Sources */,
 				4DBE42E620660DBE00103290 /* OfxMap.swift in Sources */,
 				4DBE42D7206602B900103290 /* QfxV1ParserTests.swift in Sources */,
 				4DBE42DC206602E600103290 /* QfxV1Parser.swift in Sources */,
+				4D7CA42F206723EA008D245B /* QqlSelectQuery.swift in Sources */,
 				4DBE42DE2066036300103290 /* OfxValue.swift in Sources */,
 				4DBE42DD2066035800103290 /* QfxObject.swift in Sources */,
 			);
