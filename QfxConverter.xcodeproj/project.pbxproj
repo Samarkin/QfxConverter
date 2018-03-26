@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D488AA42068969900C646BC /* QqlArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488AA32068969900C646BC /* QqlArgument.swift */; };
+		4D488AA62068987F00C646BC /* QqlResultsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488AA52068987F00C646BC /* QqlResultsConverter.swift */; };
+		4D488AA720689A6700C646BC /* QqlResultsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488AA52068987F00C646BC /* QqlResultsConverter.swift */; };
+		4D488AA820689A6D00C646BC /* QqlArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488AA32068969900C646BC /* QqlArgument.swift */; };
+		4D488AAA20689A8900C646BC /* QqlResultsConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488AA920689A8900C646BC /* QqlResultsConverterTests.swift */; };
+		4D488AAC2068A26600C646BC /* String+subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488AAB2068A26600C646BC /* String+subscript.swift */; };
+		4D488AAD2068A26600C646BC /* String+subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D488AAB2068A26600C646BC /* String+subscript.swift */; };
 		4D7CA42B20671DE9008D245B /* QqlQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CA42A20671DE9008D245B /* QqlQuery.swift */; };
 		4D7CA42C2067207C008D245B /* QqlQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CA42A20671DE9008D245B /* QqlQuery.swift */; };
 		4D7CA42E206720C0008D245B /* QqlSelectQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CA42D206720C0008D245B /* QqlSelectQuery.swift */; };
@@ -44,6 +51,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D488AA32068969900C646BC /* QqlArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlArgument.swift; sourceTree = "<group>"; };
+		4D488AA52068987F00C646BC /* QqlResultsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlResultsConverter.swift; sourceTree = "<group>"; };
+		4D488AA920689A8900C646BC /* QqlResultsConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlResultsConverterTests.swift; sourceTree = "<group>"; };
+		4D488AAB2068A26600C646BC /* String+subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+subscript.swift"; sourceTree = "<group>"; };
 		4D7CA42A20671DE9008D245B /* QqlQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlQuery.swift; sourceTree = "<group>"; };
 		4D7CA42D206720C0008D245B /* QqlSelectQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlSelectQuery.swift; sourceTree = "<group>"; };
 		4DBE42B82065F55600103290 /* QfxConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = QfxConverter; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +112,8 @@
 			children = (
 				4D7CA42A20671DE9008D245B /* QqlQuery.swift */,
 				4D7CA42D206720C0008D245B /* QqlSelectQuery.swift */,
+				4D488AA32068969900C646BC /* QqlArgument.swift */,
+				4D488AA52068987F00C646BC /* QqlResultsConverter.swift */,
 			);
 			name = Query;
 			sourceTree = "<group>";
@@ -130,6 +143,7 @@
 				4D7CA42920671DC7008D245B /* Query */,
 				4DBE42BB2065F55600103290 /* main.swift */,
 				4DBE42C22065F70200103290 /* Converter.swift */,
+				4D488AAB2068A26600C646BC /* String+subscript.swift */,
 			);
 			path = QfxConverter;
 			sourceTree = "<group>";
@@ -141,6 +155,7 @@
 				4DBE42E0206608A900103290 /* OfxValueTests.swift */,
 				4DBE42D6206602B900103290 /* QfxV1ParserTests.swift */,
 				4DE3CF67206806B200BFA803 /* QqlSelectQueryTests.swift */,
+				4D488AA920689A8900C646BC /* QqlResultsConverterTests.swift */,
 				4DBE42D8206602B900103290 /* Info.plist */,
 			);
 			path = QfxConverterTests;
@@ -236,7 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D488AAC2068A26600C646BC /* String+subscript.swift in Sources */,
 				4DBE42C92065FB4300103290 /* QfxObject.swift in Sources */,
+				4D488AA42068969900C646BC /* QqlArgument.swift in Sources */,
 				4DBE42CB2065FC4100103290 /* QfxFormatError.swift in Sources */,
 				4DBE42CD2065FCFA00103290 /* QfxV2Parser.swift in Sources */,
 				4DBE42C32065F70200103290 /* Converter.swift in Sources */,
@@ -244,6 +261,7 @@
 				4D7CA42B20671DE9008D245B /* QqlQuery.swift in Sources */,
 				4DBE42C52065F85D00103290 /* QfxParser.swift in Sources */,
 				4D7CA42E206720C0008D245B /* QqlSelectQuery.swift in Sources */,
+				4D488AA62068987F00C646BC /* QqlResultsConverter.swift in Sources */,
 				4DBE42E520660DBB00103290 /* OfxMap.swift in Sources */,
 				4DBE42CF2065FE1300103290 /* OfxValue.swift in Sources */,
 				4DBE42C72065F96800103290 /* QfxV1Parser.swift in Sources */,
@@ -254,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D488AAD2068A26600C646BC /* String+subscript.swift in Sources */,
 				4DE3CF68206806B200BFA803 /* QqlSelectQueryTests.swift in Sources */,
 				4D7CA42C2067207C008D245B /* QqlQuery.swift in Sources */,
 				4DBE42DF2066036800103290 /* QfxFormatError.swift in Sources */,
@@ -262,8 +281,11 @@
 				4DBE42E620660DBE00103290 /* OfxMap.swift in Sources */,
 				4DBE42D7206602B900103290 /* QfxV1ParserTests.swift in Sources */,
 				4DBE42DC206602E600103290 /* QfxV1Parser.swift in Sources */,
+				4D488AA720689A6700C646BC /* QqlResultsConverter.swift in Sources */,
 				4D7CA42F206723EA008D245B /* QqlSelectQuery.swift in Sources */,
 				4DBE42DE2066036300103290 /* OfxValue.swift in Sources */,
+				4D488AA820689A6D00C646BC /* QqlArgument.swift in Sources */,
+				4D488AAA20689A8900C646BC /* QqlResultsConverterTests.swift in Sources */,
 				4DBE42DD2066035800103290 /* QfxObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

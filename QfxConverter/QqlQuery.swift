@@ -9,7 +9,7 @@ final class Qql {
     static let query = Qql()
     private init() {
     }
-    func select(_ fields: String...) -> QqlPartialSelectQuery {
+    func select(_ fields: QqlArgument...) -> QqlPartialSelectQuery {
         return QqlPartialSelectQuery(fields: fields)
     }
 }

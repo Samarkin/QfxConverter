@@ -1,7 +1,7 @@
 final class QqlPartialSelectQuery {
-    private let fields: [String]
+    private let fields: [QqlArgument]
 
-    init(fields: [String]) {
+    init(fields: [QqlArgument]) {
         self.fields = fields
     }
 
@@ -11,9 +11,9 @@ final class QqlPartialSelectQuery {
 }
 
 final class QqlSelectQuery: QqlQuery {
-    private let fields: [String]
+    private let fields: [QqlArgument]
     private let path: String
-    init(fields: [String], path: String) {
+    init(fields: [QqlArgument], path: String) {
         self.fields = fields
         self.path = path
     }
@@ -37,10 +37,14 @@ final class QqlSelectQuery: QqlQuery {
                 }
             }
         }
-        return o.map { v in fields.map { f in v[f].value ?? "" } }
+        return o.map { v in fields.map { f in QqlResultsConverter.default.extract(argument: f, from: v) } }
     }
 
     func headerAsCsv() -> String {
-        return fields.joined(separator: ",") + "\n"
+        return fields.map {
+            switch $0 {
+            case let .string(s): return s
+            case let .date(s): return s
+            }}.joined(separator: ",") + "\n"
     }
 }

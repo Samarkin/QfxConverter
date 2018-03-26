@@ -9,7 +9,7 @@ final class Converter {
 
     func convert(to outputFile: String) throws {
         let query = Qql.query
-            .select("DTPOSTED", "NAME", "TRNAMT")
+            .select("DTPOSTED".asDate, "NAME", "TRNAMT")
             .from("CREDITCARDMSGSRSV1/CCSTMTTRNRS/CCSTMTRS/BANKTRANLIST/STMTTRN")
         let parser = QfxParser()
         var results: [QqlQueryResult] = []
