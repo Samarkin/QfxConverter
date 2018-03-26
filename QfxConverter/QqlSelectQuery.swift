@@ -43,8 +43,8 @@ final class QqlSelectQuery: QqlQuery {
     func headerAsCsv() -> String {
         return fields.map {
             switch $0 {
-            case let .string(s): return s
-            case let .date(s): return s
+            case let .string(_,s): return s
+            case let .date(_,s): return s
             }}.joined(separator: ",") + "\n"
     }
 }

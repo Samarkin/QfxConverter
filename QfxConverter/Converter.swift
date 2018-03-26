@@ -9,11 +9,14 @@ final class Converter {
 
     func convert(to outputFile: String) throws {
         let query = Qql.query
-            .select("DTPOSTED".asDate, "NAME", "TRNAMT")
+            .select("DTPOSTED".asDate, "NAME", "TRNAMT".called("SPEND,DEPOSIT"))
             .from("CREDITCARDMSGSRSV1/CCSTMTTRNRS/CCSTMTRS/BANKTRANLIST/STMTTRN")
         let parser = QfxParser()
         var results: [QqlQueryResult] = []
         for filename in try FileManager.default.contentsOfDirectory(atPath: folder) {
+            guard filename.hasSuffix(".qfx") || filename.hasSuffix(".ofx") else {
+                continue
+            }
             let file = (folder as NSString).appendingPathComponent(filename)
             do {
                 let qfx = try String(contentsOfFile: file, encoding: .utf8)
@@ -32,8 +35,17 @@ final class Converter {
         let file = try FileHandle(forWritingTo: outputUrl)
         file.seekToEndOfFile()
         for result in results {
-            file.write(result.asCsv().data(using: .utf8)!)
+            file.write(splitAmt(result).asCsv().data(using: .utf8)!)
         }
         file.closeFile()
+    }
+
+    private func splitAmt(_ s: [String]) -> [String] {
+        guard let amt = Double(s[2]) else {
+            return s
+        }
+        var s = s
+        s[2] = amt > 0 ? ","+s[2] : s[2]+","
+        return s
     }
 }

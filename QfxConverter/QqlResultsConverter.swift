@@ -48,9 +48,9 @@ final class QqlResultsConverter {
 
     func extract(argument arg: QqlArgument, from object: OfxValue) -> String {
         switch arg {
-        case let .string(s):
+        case let .string(s,_):
             return object[s].value ?? ""
-        case let .date(s):
+        case let .date(s,_):
             return parseDateTime(object[s].value ?? "")
         }
     }
