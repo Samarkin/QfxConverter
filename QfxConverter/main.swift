@@ -22,7 +22,7 @@ guard FileManager.default.fileExists(atPath: folder, isDirectory: &isDirectory),
 print("Converting folder \(folder)")
 let converter = Converter(folder: folder)
 do {
-    try converter.convert(to: "results.csv")
+    try converter.convert(to: (folder as NSString).appendingPathComponent("results.csv"))
 }
 catch {
     print("Unexpected error: \(error)")
