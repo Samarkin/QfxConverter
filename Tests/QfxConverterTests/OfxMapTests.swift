@@ -1,4 +1,5 @@
 import XCTest
+@testable import QfxConverterLib
 
 final class OfxMapTests: XCTestCase {
     func testComparer() {

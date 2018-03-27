@@ -1,12 +1,12 @@
-class OfxMap {
+public class OfxMap {
     fileprivate var dict: Dictionary<String, OfxValue>
-    init() {
+    public init() {
         dict = [:]
     }
-    init(_ dict: Dictionary<String, OfxValue> = [:]) {
+    public init(_ dict: Dictionary<String, OfxValue> = [:]) {
         self.dict = dict
     }
-    subscript(key: String) -> OfxValue {
+    public subscript(key: String) -> OfxValue {
         get {
             return dict[key] ?? .empty
         }
@@ -14,7 +14,7 @@ class OfxMap {
             dict[key] = newValue
         }
     }
-    func add(key: String, value: OfxValue) {
+    public func add(key: String, value: OfxValue) {
         guard let x = dict[key] else {
             dict[key] = value
             return
@@ -29,7 +29,7 @@ class OfxMap {
 }
 
 extension OfxMap: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         var result = "{"
         for (k,v) in dict {
             if result.count > 1 {
@@ -43,7 +43,7 @@ extension OfxMap: CustomStringConvertible {
 }
 
 extension OfxMap: Equatable {
-    static func ==(left: OfxMap, right: OfxMap) -> Bool {
+    public static func ==(left: OfxMap, right: OfxMap) -> Bool {
         return left.description == right.description
     }
 }

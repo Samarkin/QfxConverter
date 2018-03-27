@@ -1,21 +1,21 @@
-typealias QqlQueryResult = [String]
+public typealias QqlQueryResult = [String]
 
-protocol QqlQuery {
+public protocol QqlQuery {
     func perform(on: QfxObject) -> [QqlQueryResult]
 }
 
 // QQL stands for "QFX query language"
-final class Qql {
-    static let query = Qql()
+public final class Qql {
+    public static let query = Qql()
     private init() {
     }
-    func select(_ fields: QqlArgument...) -> QqlPartialSelectQuery {
+    public func select(_ fields: QqlArgument...) -> QqlPartialSelectQuery {
         return QqlPartialSelectQuery(fields: fields)
     }
 }
 
 extension Array where Array.Element == String {
-    func asCsv() -> String {
+    public func asCsv() -> String {
         return self.joined(separator: ",") + "\n"
     }
 }

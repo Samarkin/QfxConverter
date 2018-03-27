@@ -1,4 +1,5 @@
 import XCTest
+@testable import QfxConverterLib
 
 final class QfxV1ParserTests: XCTestCase {
     func testEmpty() {

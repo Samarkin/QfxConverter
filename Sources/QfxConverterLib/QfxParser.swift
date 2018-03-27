@@ -1,7 +1,9 @@
 import Foundation
 
-final class QfxParser {
-    func parse(_ qfx: String) throws -> QfxObject {
+public final class QfxParser {
+    public init() {
+    }
+    public func parse(_ qfx: String) throws -> QfxObject {
         for ch in qfx {
             if CharacterSet.whitespacesAndNewlines.contains(ch.unicodeScalars.first!) {
                 continue

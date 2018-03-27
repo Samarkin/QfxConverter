@@ -1,16 +1,16 @@
-final class QqlPartialSelectQuery {
+public final class QqlPartialSelectQuery {
     private let fields: [QqlArgument]
 
     init(fields: [QqlArgument]) {
         self.fields = fields
     }
 
-    func from(_ path: String) -> QqlSelectQuery {
+    public func from(_ path: String) -> QqlSelectQuery {
         return QqlSelectQuery(fields: fields, path: path)
     }
 }
 
-final class QqlSelectQuery: QqlQuery {
+public final class QqlSelectQuery: QqlQuery {
     private let fields: [QqlArgument]
     private let path: String
     init(fields: [QqlArgument], path: String) {
@@ -18,7 +18,7 @@ final class QqlSelectQuery: QqlQuery {
         self.path = path
     }
 
-    func perform(on object: QfxObject) -> [QqlQueryResult] {
+    public func perform(on object: QfxObject) -> [QqlQueryResult] {
         guard let ofx = object.ofx else {
             return []
         }
@@ -40,7 +40,7 @@ final class QqlSelectQuery: QqlQuery {
         return o.map { v in fields.map { f in QqlResultsConverter.default.extract(argument: f, from: v) } }
     }
 
-    func headerAsCsv() -> String {
+    public func headerAsCsv() -> String {
         return fields.map {
             switch $0 {
             case let .string(_,s): return s

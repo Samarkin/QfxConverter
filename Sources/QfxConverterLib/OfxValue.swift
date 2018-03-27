@@ -1,24 +1,24 @@
-enum OfxValue {
+public enum OfxValue {
     case empty
     case map(OfxMap)
     case value(String)
     case array([OfxValue])
 }
 
-extension OfxValue {
-    subscript(key: String) -> OfxValue {
+public extension OfxValue {
+    public subscript(key: String) -> OfxValue {
         guard case let .map(map) = self else {
             return .empty
         }
         return map[key]
     }
-    subscript(index: Int) -> OfxValue {
+    public subscript(index: Int) -> OfxValue {
         guard case let .array(array) = self, 0..<array.count ~= index else {
             return .empty
         }
         return array[index]
     }
-    var value: String? {
+    public var value: String? {
         guard case let .value(s) = self else {
             return nil
         }
@@ -27,13 +27,13 @@ extension OfxValue {
 }
 
 extension OfxValue: ExpressibleByStringLiteral {
-    init(stringLiteral value: String) {
+    public init(stringLiteral value: String) {
         self = .value(value)
     }
 }
 
 extension OfxValue: ExpressibleByDictionaryLiteral {
-    init(dictionaryLiteral elements: (String, OfxValue)...) {
+    public init(dictionaryLiteral elements: (String, OfxValue)...) {
         let map = OfxMap()
         for (k,v) in elements {
             map[k] = v
@@ -43,13 +43,13 @@ extension OfxValue: ExpressibleByDictionaryLiteral {
 }
 
 extension OfxValue: ExpressibleByArrayLiteral {
-    init(arrayLiteral elements: OfxValue...) {
+    public init(arrayLiteral elements: OfxValue...) {
         self = .array(elements)
     }
 }
 
 extension OfxValue: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         switch self {
         case .empty:
             return "null"
@@ -72,7 +72,7 @@ extension OfxValue: CustomStringConvertible {
 }
 
 extension OfxValue: Equatable {
-    static func ==(left: OfxValue, right: OfxValue) -> Bool {
+    public static func ==(left: OfxValue, right: OfxValue) -> Bool {
         if case let .value(leftValue) = left, case let .value(rightValue) = right {
             return leftValue == rightValue
         }

@@ -7,8 +7,8 @@ fileprivate let dateFormatter = { () -> DateFormatter in
     return formatter
 }()
 
-final class QqlResultsConverter {
-    static let `default` = QqlResultsConverter()
+public final class QqlResultsConverter {
+    public static let `default` = QqlResultsConverter()
 
     private init() {
     }

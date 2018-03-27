@@ -1,4 +1,5 @@
 import Foundation
+import QfxConverterLib
 
 final class Converter {
     let folder: String
