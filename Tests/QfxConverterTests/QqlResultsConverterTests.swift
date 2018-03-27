@@ -33,4 +33,18 @@ final class QqlResultsConverterTests: XCTestCase {
         XCTAssertEqual(QqlResultsConverter.default.extract(argument: "key1".asDate, from: arr), "")
         XCTAssertEqual(QqlResultsConverter.default.extract(argument: "key2".asDate, from: arr), "")
     }
+
+    static var allTests: [(String, (QqlResultsConverterTests) -> () throws -> Void)] {
+        return [
+            ("testExtractStrings", testExtractStrings),
+            ("testExtractDates", testExtractDates),
+            ("testLinuxTestSuite", testLinuxTestSuite),
+        ]
+    }
+
+    func testLinuxTestSuite() {
+        #if os(macOS)
+            XCTAssertEqual(type(of: self).allTests.count, type(of: self).defaultTestSuite.testCaseCount)
+        #endif
+    }
 }

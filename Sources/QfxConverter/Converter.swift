@@ -18,7 +18,7 @@ final class Converter {
             guard filename.hasSuffix(".qfx") || filename.hasSuffix(".ofx") else {
                 continue
             }
-            let file = (folder as NSString).appendingPathComponent(filename)
+            let file = NSString(string: folder).appendingPathComponent(filename)
             do {
                 let qfx = try String(contentsOfFile: file, encoding: .utf8)
                 let obj = try parser.parse(qfx)

@@ -43,4 +43,23 @@ final class QfxV1ParserTests: XCTestCase {
         let result = try! parser.parse("<OFX><KEY>VALUE1<KEY>VALUE2</OFX>")
         XCTAssertEqual(result.ofx, ["KEY": ["VALUE1","VALUE2"]])
     }
+
+    static var allTests: [(String, (QfxV1ParserTests) -> () throws -> Void)] {
+        return [
+            ("testEmpty", testEmpty),
+            ("testKeyValue", testKeyValue),
+            ("testTwoKeys", testTwoKeys),
+            ("testSubKeyValue", testSubKeyValue),
+            ("testTwoSubKeys", testTwoSubKeys),
+            ("testWhitespaces", testWhitespaces),
+            ("testArrays", testArrays),
+            ("testLinuxTestSuite", testLinuxTestSuite),
+        ]
+    }
+
+    func testLinuxTestSuite() {
+        #if os(macOS)
+            XCTAssertEqual(type(of: self).allTests.count, type(of: self).defaultTestSuite.testCaseCount)
+        #endif
+    }
 }

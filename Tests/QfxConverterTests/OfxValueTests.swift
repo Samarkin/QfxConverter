@@ -146,4 +146,28 @@ final class OfxValueTests: XCTestCase {
         XCTAssertEqual(map[0], .empty)
         XCTAssertEqual(map[-1], .empty)
     }
+
+    static var allTests: [(String, (OfxValueTests) -> () throws -> Void)] {
+        return [
+            ("testEmptyComparer", testEmptyComparer),
+            ("testValueComparer", testValueComparer),
+            ("testMapComparer", testMapComparer),
+            ("testArrayComparer", testArrayComparer),
+            ("testMixedComparer", testMixedComparer),
+            ("testStringLiteralInit", testStringLiteralInit),
+            ("testDictLiteralInit", testDictLiteralInit),
+            ("testArrayLiteralInit", testArrayLiteralInit),
+            ("testDescription", testDescription),
+            ("testDescriptionEscaping", testDescriptionEscaping),
+            ("testStringSubscript", testStringSubscript),
+            ("testIntegerSubscript", testIntegerSubscript),
+            ("testLinuxTestSuite", testLinuxTestSuite),
+        ]
+    }
+
+    func testLinuxTestSuite() {
+        #if os(macOS)
+            XCTAssertEqual(type(of: self).allTests.count, type(of: self).defaultTestSuite.testCaseCount)
+        #endif
+    }
 }

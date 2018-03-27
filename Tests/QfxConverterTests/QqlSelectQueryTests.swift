@@ -65,4 +65,20 @@ final class QqlSelectQueryTests: XCTestCase {
             }
         }
     }
+
+    static var allTests: [(String, (QqlSelectQueryTests) -> () throws -> Void)] {
+        return [
+            ("testSimpleQuery", testSimpleQuery),
+            ("testNotValue", testNotValue),
+            ("testDeepError", testDeepError),
+            ("testNil", testNil),
+            ("testLinuxTestSuite", testLinuxTestSuite),
+        ]
+    }
+
+    func testLinuxTestSuite() {
+        #if os(macOS)
+            XCTAssertEqual(type(of: self).allTests.count, type(of: self).defaultTestSuite.testCaseCount)
+        #endif
+    }
 }

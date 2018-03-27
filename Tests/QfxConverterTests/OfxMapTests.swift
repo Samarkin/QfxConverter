@@ -104,4 +104,24 @@ final class OfxMapTests: XCTestCase {
         map.add(key: "key", value: "value3")
         XCTAssertEqual(map["key"], ["value1", "value2", "value3"])
     }
+
+    static var allTests: [(String, (OfxMapTests) -> () throws -> Void)] {
+        return [
+            ("testComparer", testComparer),
+            ("testCompDifferentValues", testCompDifferentValues),
+            ("testCompDifferentKeys", testCompDifferentKeys),
+            ("testCompMoreKeys", testCompMoreKeys),
+            ("testCompRecursive", testCompRecursive),
+            ("testCompRecursiveNegative", testCompRecursiveNegative),
+            ("testSubscript", testSubscript),
+            ("testAdd", testAdd),
+            ("testLinuxTestSuite", testLinuxTestSuite),
+        ]
+    }
+
+    func testLinuxTestSuite() {
+        #if os(macOS)
+            XCTAssertEqual(type(of: self).allTests.count, type(of: self).defaultTestSuite.testCaseCount)
+        #endif 
+    }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-let exePath = ProcessInfo.processInfo.arguments[0] as NSString
+let exePath = NSString(string: ProcessInfo.processInfo.arguments[0])
 
 guard ProcessInfo.processInfo.arguments.count > 1 else {
     let exeName = exePath.lastPathComponent
@@ -22,7 +22,7 @@ guard FileManager.default.fileExists(atPath: folder, isDirectory: &isDirectory),
 print("Converting folder \(folder)")
 let converter = Converter(folder: folder)
 do {
-    try converter.convert(to: (folder as NSString).appendingPathComponent("results.csv"))
+    try converter.convert(to: NSString(string: folder).appendingPathComponent("results.csv"))
 }
 catch {
     print("Unexpected error: \(error)")

@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"QfxConverter::QfxConverterPackageTests::ProductTarget" /* QfxConverterPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_83 /* Build configuration list for PBXAggregateTarget "QfxConverterPackageTests" */;
+			buildConfigurationList = OBJ_85 /* Build configuration list for PBXAggregateTarget "QfxConverterPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_86 /* PBXTargetDependency */,
+				OBJ_88 /* PBXTargetDependency */,
 			);
 			name = QfxConverterPackageTests;
 			productName = QfxConverterPackageTests;
@@ -21,46 +21,47 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_40 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_46 /* OfxMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* OfxMapTests.swift */; };
-		OBJ_47 /* OfxValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* OfxValueTests.swift */; };
-		OBJ_48 /* QfxV1ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* QfxV1ParserTests.swift */; };
-		OBJ_49 /* QqlResultsConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* QqlResultsConverterTests.swift */; };
-		OBJ_50 /* QqlSelectQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* QqlSelectQueryTests.swift */; };
-		OBJ_52 /* QfxConverterLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "QfxConverter::QfxConverterLib::Product" /* QfxConverterLib.framework */; };
-		OBJ_60 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Converter.swift */; };
-		OBJ_61 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* main.swift */; };
-		OBJ_63 /* QfxConverterLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "QfxConverter::QfxConverterLib::Product" /* QfxConverterLib.framework */; };
-		OBJ_69 /* OfxMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* OfxMap.swift */; };
-		OBJ_70 /* OfxValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* OfxValue.swift */; };
-		OBJ_71 /* QfxFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* QfxFormatError.swift */; };
-		OBJ_72 /* QfxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* QfxObject.swift */; };
-		OBJ_73 /* QfxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* QfxParser.swift */; };
-		OBJ_74 /* QfxV1Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* QfxV1Parser.swift */; };
-		OBJ_75 /* QfxV2Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* QfxV2Parser.swift */; };
-		OBJ_76 /* QqlArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* QqlArgument.swift */; };
-		OBJ_77 /* QqlQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* QqlQuery.swift */; };
-		OBJ_78 /* QqlResultsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* QqlResultsConverter.swift */; };
-		OBJ_79 /* QqlSelectQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* QqlSelectQuery.swift */; };
-		OBJ_80 /* String+subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* String+subscript.swift */; };
+		OBJ_41 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_47 /* OfxMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* OfxMapTests.swift */; };
+		OBJ_48 /* OfxValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* OfxValueTests.swift */; };
+		OBJ_49 /* QfxV1ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* QfxV1ParserTests.swift */; };
+		OBJ_50 /* QqlResultsConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* QqlResultsConverterTests.swift */; };
+		OBJ_51 /* QqlSelectQueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* QqlSelectQueryTests.swift */; };
+		OBJ_53 /* QfxConverterLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "QfxConverter::QfxConverterLib::Product" /* QfxConverterLib.framework */; };
+		OBJ_61 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Converter.swift */; };
+		OBJ_62 /* ObjCBool+linux.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* ObjCBool+linux.swift */; };
+		OBJ_63 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* main.swift */; };
+		OBJ_65 /* QfxConverterLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "QfxConverter::QfxConverterLib::Product" /* QfxConverterLib.framework */; };
+		OBJ_71 /* OfxMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* OfxMap.swift */; };
+		OBJ_72 /* OfxValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* OfxValue.swift */; };
+		OBJ_73 /* QfxFormatError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* QfxFormatError.swift */; };
+		OBJ_74 /* QfxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* QfxObject.swift */; };
+		OBJ_75 /* QfxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* QfxParser.swift */; };
+		OBJ_76 /* QfxV1Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* QfxV1Parser.swift */; };
+		OBJ_77 /* QfxV2Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* QfxV2Parser.swift */; };
+		OBJ_78 /* QqlArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* QqlArgument.swift */; };
+		OBJ_79 /* QqlQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* QqlQuery.swift */; };
+		OBJ_80 /* QqlResultsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* QqlResultsConverter.swift */; };
+		OBJ_81 /* QqlSelectQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* QqlSelectQuery.swift */; };
+		OBJ_82 /* String+subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* String+subscript.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4DBC99182069EE7900E5340F /* PBXContainerItemProxy */ = {
+		4DE7DC02206A0420004B3631 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "QfxConverter::QfxConverterLib";
 			remoteInfo = QfxConverterLib;
 		};
-		4DBC99192069EE7900E5340F /* PBXContainerItemProxy */ = {
+		4DE7DC03206A0420004B3631 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "QfxConverter::QfxConverterLib";
 			remoteInfo = QfxConverterLib;
 		};
-		4DBC991A2069EE7A00E5340F /* PBXContainerItemProxy */ = {
+		4DE7DC04206A0422004B3631 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -82,12 +83,13 @@
 		OBJ_19 /* QqlSelectQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlSelectQuery.swift; sourceTree = "<group>"; };
 		OBJ_20 /* String+subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+subscript.swift"; sourceTree = "<group>"; };
 		OBJ_22 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
-		OBJ_23 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_26 /* OfxMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxMapTests.swift; sourceTree = "<group>"; };
-		OBJ_27 /* OfxValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxValueTests.swift; sourceTree = "<group>"; };
-		OBJ_28 /* QfxV1ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QfxV1ParserTests.swift; sourceTree = "<group>"; };
-		OBJ_29 /* QqlResultsConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlResultsConverterTests.swift; sourceTree = "<group>"; };
-		OBJ_30 /* QqlSelectQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlSelectQueryTests.swift; sourceTree = "<group>"; };
+		OBJ_23 /* ObjCBool+linux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjCBool+linux.swift"; sourceTree = "<group>"; };
+		OBJ_24 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_27 /* OfxMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxMapTests.swift; sourceTree = "<group>"; };
+		OBJ_28 /* OfxValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxValueTests.swift; sourceTree = "<group>"; };
+		OBJ_29 /* QfxV1ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QfxV1ParserTests.swift; sourceTree = "<group>"; };
+		OBJ_30 /* QqlResultsConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlResultsConverterTests.swift; sourceTree = "<group>"; };
+		OBJ_31 /* QqlSelectQueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QqlSelectQueryTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* OfxMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfxMap.swift; sourceTree = "<group>"; };
 		"QfxConverter::QfxConverter::Product" /* QfxConverter */ = {isa = PBXFileReference; lastKnownFileType = text; path = QfxConverter; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,23 +98,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_51 /* Frameworks */ = {
+		OBJ_52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_52 /* QfxConverterLib.framework in Frameworks */,
+				OBJ_53 /* QfxConverterLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_62 /* Frameworks */ = {
+		OBJ_64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_63 /* QfxConverterLib.framework in Frameworks */,
+				OBJ_65 /* QfxConverterLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_81 /* Frameworks */ = {
+		OBJ_83 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
@@ -126,34 +128,35 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_22 /* Converter.swift */,
-				OBJ_23 /* main.swift */,
+				OBJ_23 /* ObjCBool+linux.swift */,
+				OBJ_24 /* main.swift */,
 			);
 			name = QfxConverter;
 			path = Sources/QfxConverter;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_24 /* Tests */ = {
+		OBJ_25 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_25 /* QfxConverterTests */,
+				OBJ_26 /* QfxConverterTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_25 /* QfxConverterTests */ = {
+		OBJ_26 /* QfxConverterTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_26 /* OfxMapTests.swift */,
-				OBJ_27 /* OfxValueTests.swift */,
-				OBJ_28 /* QfxV1ParserTests.swift */,
-				OBJ_29 /* QqlResultsConverterTests.swift */,
-				OBJ_30 /* QqlSelectQueryTests.swift */,
+				OBJ_27 /* OfxMapTests.swift */,
+				OBJ_28 /* OfxValueTests.swift */,
+				OBJ_29 /* QfxV1ParserTests.swift */,
+				OBJ_30 /* QqlResultsConverterTests.swift */,
+				OBJ_31 /* QqlSelectQueryTests.swift */,
 			);
 			name = QfxConverterTests;
 			path = Tests/QfxConverterTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_31 /* Products */ = {
+		OBJ_32 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				"QfxConverter::QfxConverterTests::Product" /* QfxConverterTests.xctest */,
@@ -168,8 +171,8 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_24 /* Tests */,
-				OBJ_31 /* Products */,
+				OBJ_25 /* Tests */,
+				OBJ_32 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -208,15 +211,15 @@
 /* Begin PBXNativeTarget section */
 		"QfxConverter::QfxConverter" /* QfxConverter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_56 /* Build configuration list for PBXNativeTarget "QfxConverter" */;
+			buildConfigurationList = OBJ_57 /* Build configuration list for PBXNativeTarget "QfxConverter" */;
 			buildPhases = (
-				OBJ_59 /* Sources */,
-				OBJ_62 /* Frameworks */,
+				OBJ_60 /* Sources */,
+				OBJ_64 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_64 /* PBXTargetDependency */,
+				OBJ_66 /* PBXTargetDependency */,
 			);
 			name = QfxConverter;
 			productName = QfxConverter;
@@ -225,10 +228,10 @@
 		};
 		"QfxConverter::QfxConverterLib" /* QfxConverterLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_65 /* Build configuration list for PBXNativeTarget "QfxConverterLib" */;
+			buildConfigurationList = OBJ_67 /* Build configuration list for PBXNativeTarget "QfxConverterLib" */;
 			buildPhases = (
-				OBJ_68 /* Sources */,
-				OBJ_81 /* Frameworks */,
+				OBJ_70 /* Sources */,
+				OBJ_83 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,15 +244,15 @@
 		};
 		"QfxConverter::QfxConverterTests" /* QfxConverterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_42 /* Build configuration list for PBXNativeTarget "QfxConverterTests" */;
+			buildConfigurationList = OBJ_43 /* Build configuration list for PBXNativeTarget "QfxConverterTests" */;
 			buildPhases = (
-				OBJ_45 /* Sources */,
-				OBJ_51 /* Frameworks */,
+				OBJ_46 /* Sources */,
+				OBJ_52 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_53 /* PBXTargetDependency */,
+				OBJ_54 /* PBXTargetDependency */,
 			);
 			name = QfxConverterTests;
 			productName = QfxConverterTests;
@@ -258,9 +261,9 @@
 		};
 		"QfxConverter::SwiftPMPackageDescription" /* QfxConverterPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_36 /* Build configuration list for PBXNativeTarget "QfxConverterPackageDescription" */;
+			buildConfigurationList = OBJ_37 /* Build configuration list for PBXNativeTarget "QfxConverterPackageDescription" */;
 			buildPhases = (
-				OBJ_39 /* Sources */,
+				OBJ_40 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -286,7 +289,7 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_31 /* Products */;
+			productRefGroup = OBJ_32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -300,71 +303,72 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_39 /* Sources */ = {
+		OBJ_40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_40 /* Package.swift in Sources */,
+				OBJ_41 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_45 /* Sources */ = {
+		OBJ_46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_46 /* OfxMapTests.swift in Sources */,
-				OBJ_47 /* OfxValueTests.swift in Sources */,
-				OBJ_48 /* QfxV1ParserTests.swift in Sources */,
-				OBJ_49 /* QqlResultsConverterTests.swift in Sources */,
-				OBJ_50 /* QqlSelectQueryTests.swift in Sources */,
+				OBJ_47 /* OfxMapTests.swift in Sources */,
+				OBJ_48 /* OfxValueTests.swift in Sources */,
+				OBJ_49 /* QfxV1ParserTests.swift in Sources */,
+				OBJ_50 /* QqlResultsConverterTests.swift in Sources */,
+				OBJ_51 /* QqlSelectQueryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_59 /* Sources */ = {
+		OBJ_60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_60 /* Converter.swift in Sources */,
-				OBJ_61 /* main.swift in Sources */,
+				OBJ_61 /* Converter.swift in Sources */,
+				OBJ_62 /* ObjCBool+linux.swift in Sources */,
+				OBJ_63 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_68 /* Sources */ = {
+		OBJ_70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_69 /* OfxMap.swift in Sources */,
-				OBJ_70 /* OfxValue.swift in Sources */,
-				OBJ_71 /* QfxFormatError.swift in Sources */,
-				OBJ_72 /* QfxObject.swift in Sources */,
-				OBJ_73 /* QfxParser.swift in Sources */,
-				OBJ_74 /* QfxV1Parser.swift in Sources */,
-				OBJ_75 /* QfxV2Parser.swift in Sources */,
-				OBJ_76 /* QqlArgument.swift in Sources */,
-				OBJ_77 /* QqlQuery.swift in Sources */,
-				OBJ_78 /* QqlResultsConverter.swift in Sources */,
-				OBJ_79 /* QqlSelectQuery.swift in Sources */,
-				OBJ_80 /* String+subscript.swift in Sources */,
+				OBJ_71 /* OfxMap.swift in Sources */,
+				OBJ_72 /* OfxValue.swift in Sources */,
+				OBJ_73 /* QfxFormatError.swift in Sources */,
+				OBJ_74 /* QfxObject.swift in Sources */,
+				OBJ_75 /* QfxParser.swift in Sources */,
+				OBJ_76 /* QfxV1Parser.swift in Sources */,
+				OBJ_77 /* QfxV2Parser.swift in Sources */,
+				OBJ_78 /* QqlArgument.swift in Sources */,
+				OBJ_79 /* QqlQuery.swift in Sources */,
+				OBJ_80 /* QqlResultsConverter.swift in Sources */,
+				OBJ_81 /* QqlSelectQuery.swift in Sources */,
+				OBJ_82 /* String+subscript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_53 /* PBXTargetDependency */ = {
+		OBJ_54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "QfxConverter::QfxConverterLib" /* QfxConverterLib */;
-			targetProxy = 4DBC99192069EE7900E5340F /* PBXContainerItemProxy */;
+			targetProxy = 4DE7DC03206A0420004B3631 /* PBXContainerItemProxy */;
 		};
-		OBJ_64 /* PBXTargetDependency */ = {
+		OBJ_66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "QfxConverter::QfxConverterLib" /* QfxConverterLib */;
-			targetProxy = 4DBC99182069EE7900E5340F /* PBXContainerItemProxy */;
+			targetProxy = 4DE7DC02206A0420004B3631 /* PBXContainerItemProxy */;
 		};
-		OBJ_86 /* PBXTargetDependency */ = {
+		OBJ_88 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "QfxConverter::QfxConverterTests" /* QfxConverterTests */;
-			targetProxy = 4DBC991A2069EE7A00E5340F /* PBXContainerItemProxy */;
+			targetProxy = 4DE7DC04206A0422004B3631 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -391,7 +395,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_37 /* Debug */ = {
+		OBJ_38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -400,7 +404,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_38 /* Release */ = {
+		OBJ_39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -429,7 +433,7 @@
 			};
 			name = Release;
 		};
-		OBJ_43 /* Debug */ = {
+		OBJ_44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -447,7 +451,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_44 /* Release */ = {
+		OBJ_45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -465,7 +469,7 @@
 			};
 			name = Release;
 		};
-		OBJ_57 /* Debug */ = {
+		OBJ_58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -484,7 +488,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_58 /* Release */ = {
+		OBJ_59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -503,7 +507,7 @@
 			};
 			name = Release;
 		};
-		OBJ_66 /* Debug */ = {
+		OBJ_68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -525,7 +529,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_67 /* Release */ = {
+		OBJ_69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -547,13 +551,13 @@
 			};
 			name = Release;
 		};
-		OBJ_84 /* Debug */ = {
+		OBJ_86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_85 /* Release */ = {
+		OBJ_87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
@@ -571,47 +575,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_36 /* Build configuration list for PBXNativeTarget "QfxConverterPackageDescription" */ = {
+		OBJ_37 /* Build configuration list for PBXNativeTarget "QfxConverterPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_37 /* Debug */,
-				OBJ_38 /* Release */,
+				OBJ_38 /* Debug */,
+				OBJ_39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_42 /* Build configuration list for PBXNativeTarget "QfxConverterTests" */ = {
+		OBJ_43 /* Build configuration list for PBXNativeTarget "QfxConverterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_43 /* Debug */,
-				OBJ_44 /* Release */,
+				OBJ_44 /* Debug */,
+				OBJ_45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_56 /* Build configuration list for PBXNativeTarget "QfxConverter" */ = {
+		OBJ_57 /* Build configuration list for PBXNativeTarget "QfxConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_57 /* Debug */,
-				OBJ_58 /* Release */,
+				OBJ_58 /* Debug */,
+				OBJ_59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_65 /* Build configuration list for PBXNativeTarget "QfxConverterLib" */ = {
+		OBJ_67 /* Build configuration list for PBXNativeTarget "QfxConverterLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_66 /* Debug */,
-				OBJ_67 /* Release */,
+				OBJ_68 /* Debug */,
+				OBJ_69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		OBJ_83 /* Build configuration list for PBXAggregateTarget "QfxConverterPackageTests" */ = {
+		OBJ_85 /* Build configuration list for PBXAggregateTarget "QfxConverterPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_84 /* Debug */,
-				OBJ_85 /* Release */,
+				OBJ_86 /* Debug */,
+				OBJ_87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
